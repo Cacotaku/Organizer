@@ -6,7 +6,7 @@ def _cleanScreen():
     os.system('cls' if os.name == 'nt' else 'clear')
     pass
 
-new_Folder = "OrganizadorDeArquivos" ### specify the name of the new folder
+new_Folder = input(f"Insert name for the general parent folder where files will be alocated") ### specify the name of the new folder
 
 path = os.getcwd() ### get the current working directory
 
@@ -76,4 +76,5 @@ for files in os.listdir():  ### iterate through the files in the current directo
             
             os.replace(files, f"{new_Folder}/{extension}/{files}")  ### move the file to the folder for the extension
             print(f"File {files} moved to folder {extension} successfully!")
+
     
